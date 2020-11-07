@@ -1,0 +1,27 @@
+{% extends "socialblog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="container">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend>Join Now!</legend>
+                {{ form|crispy }}
+                <div class="form-group col-md-6 mb-0">
+                {{ form.First Name|as_crispy_field }}
+                </div>
+            </fieldset>
+            <div class="form-group">
+                <button type="submit">Sign Up</button>
+            </div>
+        </form>
+        <div>
+            <small>
+                Already Have An Account? <a href="{% url 'login' %}">Sign In</a>
+            </small>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block footer %}
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "Socialblog/base.html" %}
+
+
+{% block title %}
+Welcome
+{% endblock %}
+
+{% block content %}
+
+<!-- image -->
+
+<div class="jumbotron">
+      <div class="container">
+
+
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+
+          <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+        <h1 style="margin-top:10px; text-shadow: 1px 1px 1px #1212bc; color: #218a8a;"> Social Awareness</h1>
+        <div class="heartbeat"><h3 style=text-align:center; class="animated:infinite heartBeat">Aware the people<br>Aware the nation</h3>
+				</div>
+        <p><a class="btn btn-primary btn-lg" href="{% url 'about' %}" role="button">Learn more &raquo;</a></p>
+
+      </div>
+    </div>
+    {% if user.is_authenticated %}
+        <div class="container">
+      <!-- Example row of columns -->
+        <div class="row">
+        <div class="col-md-4">
+          <h2>Welcome to our website to promote your business</h2>
+          <p><a class="btn btn-default" href="{% url 'business' %}" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Visit our website for Social Awareness</h2>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Contact Us</h2>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        </div>
+      </div>
+
+    {% else %}
+            <div class="container">
+                <h4>
+                    Create an account to view and post campaign
+                </h4>
+            </div>
+    {% endif %}
+
+      <hr>
+{% endblock %}

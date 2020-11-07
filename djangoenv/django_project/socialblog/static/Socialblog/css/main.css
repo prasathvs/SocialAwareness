@@ -1,0 +1,35 @@
+
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+h2,h3,h4,h5,h6{
+    color: #b92c28;
+}
+
+#bg{
+    height:100vh; width:100%;
+    background-image:url('/SocialAwareness/djangoenv/django_project/socialblog/static/Socialblog/img/image2.jpg.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
